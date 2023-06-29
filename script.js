@@ -1,10 +1,11 @@
-//your JS code here. If required.
-let op = document.getElementById("output");
-function Prominse(resolve,reject) {
-	resolve("Hello, world!");
+funtion delayoutput(){
+	return new Promise((resolve)=>{
+		setTimeOut(()=>{
+			resolve("Hello, world!")
+		},1000);
+	});
 }
-let prom1 = new Promise();
 
-prom1.then(data)=>{
-	op.innerText = data;
-}
+delayoutput().then((data)=>{
+	document.getElementById("output").innerText =data;
+})
